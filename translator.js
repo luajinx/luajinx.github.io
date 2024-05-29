@@ -88,6 +88,7 @@ function outputText(text)
 
 function numbersToTrinary(string) {
     if (letterToIdMap[string]){
+
         console.log(letterToIdMap[string], Number(letterToIdMap[string]))
         return (letterToIdMap[string]).toString(3).toString();
     
@@ -140,6 +141,7 @@ function textToDarfish(inputText)
 
 var translatedText = '';
 var processedText = inputText.toLowerCase()
+var processedText = processedText.replace(/(\r\n|\n|\r)/gm, "");
 
 if (/\d/.test(inputText)){
   console.log("number inside text")
@@ -147,7 +149,6 @@ if (/\d/.test(inputText)){
 }
 
 var words = processedText.split(' ');
-console.log(words)
 words = words.filter(FilterWhiteSpaceStrings)
 const letters = words.map(word => word.split(''));
 const numbers = letters.map(word => word.map(letter => numbersToTrinary(letter)));
@@ -158,7 +159,7 @@ numbers.forEach(function (wordArrays, index){
         
         const symbolsOfTheLetter = toSymbols(item.split(''));
         for (let symbol of symbolsOfTheLetter){
-            translatedText = translatedText.concat(symbol," ")
+            translatedText = translatedText.concat(symbol," ")  
         }
         
         if (!(index === wordArrays.length -1)) {
@@ -181,7 +182,6 @@ return translatedText
 
 function TrinaryToLetter(string)
 {
- console.log(string)
   var decimalNumber = parseInt(Number(string),3);
 
   if (IDtoLetterMap[decimalNumber])
@@ -207,16 +207,24 @@ function darfishToText(inputText)
   }
 
     var translatedText = ''
+   
+    var processedText = inputText.toLowerCase();
+    processedText = processedText.replace(/(\r\n|\n|\r)/gm, "");
 
-    var wordArrays = inputText.split('😺😺');
+    console.log(inputText,processedText);
+
+    var wordArrays = processedText.split('😺😺');
     
     var letterArrays = wordArrays.map(word => word.split('😺'));
     var symbolArrays = letterArrays.map(word => word.map(letter => letter.split(' ')));
+    console.log(symbolArrays)
     var numberArrays = symbolArrays.map(words => words.map(letter => letter.map(symbols => DargumentsToNumbers(symbols))));
+    console.log(numberArrays)
 
     var combinedArray = numberArrays.map(words => words.map(letter => letter.join('')));
+    console.log(combinedArray)
     combinedArray = combinedArray.map(words => words.map(letter => TrinaryToLetter(letter)));
-    console.log()
+    console.log(combinedArray)
     
     combinedArray.forEach(function (word, index){
 
