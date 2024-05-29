@@ -86,7 +86,7 @@ select{
     background-color: rgb(26, 77, 46);
     border-radius: 5px;
     border: 2px solid rgb(232, 223, 202);
-    overflow: hidden;
+    overflow: scroll;
 
     cursor:pointer;
 }
