@@ -95,7 +95,8 @@ function numbersToTrinary(string) {
       }
   else{
       if (string == "z"){
-          return 0
+        console.log('string is z')
+          return '0'
       }
       return string;
   }
