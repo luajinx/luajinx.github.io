@@ -162,11 +162,11 @@ numbers.forEach(function (wordArrays, index){
       }
       
       if (!(index === wordArrays.length -1)) {
-      translatedText = translatedText.concat("😺 ")};
+      translatedText = translatedText.concat("🐱 ")};
     
   });
   if (!(index === numbers.length -1)) {
-      translatedText = translatedText.concat("😺😺 ")};
+      translatedText = translatedText.concat("🐱🐱 ")};
 
 
 });
