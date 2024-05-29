@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darfish translator</title>
+</head>
+<body>
+    <script src="translator.js"></script> 
+    <header>
+    <h1>official darfish translator by <a href="https://github.com/luajinx">jinx</a></h1>
+    </header>
 
+    <div id="inputcontainer">
+        <select name="translation type">
+            <option value=1>text to darfish</option>
+            <option value=2>darfish to text</option>
+        </select>
+
+        <textarea name="textarea" id="textinput"
+         input="textarea" 
+          rows="7" placeholder="Write what you want to translate here"></textarea>
+          <button onclick="onButtonPress()">Translate</button>
+    </div>
+
+    <div id="outputcontainer">
+        <div id="outputdiv">outputdiv</div>
+    </div>
+
+</body>
+</html>
