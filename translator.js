@@ -130,7 +130,7 @@ function DargumentsToNumbers(dargumentstrings) {
   return darguments2[dargumentstrings]
 }
 else{
-  return dargumentstrings
+  
 }
 
 }
@@ -181,11 +181,12 @@ return translatedText
 
 function TrinaryToLetter(string)
 {
+ console.log(string)
   var decimalNumber = parseInt(Number(string),3);
 
   if (IDtoLetterMap[decimalNumber])
     {
-      console.log("zzz")
+    
       return IDtoLetterMap[decimalNumber]
     } else {
       return string;
@@ -212,15 +213,17 @@ function darfishToText(inputText)
     var letterArrays = wordArrays.map(word => word.split('😺'));
     var symbolArrays = letterArrays.map(word => word.map(letter => letter.split(' ')));
     var numberArrays = symbolArrays.map(words => words.map(letter => letter.map(symbols => DargumentsToNumbers(symbols))));
+
     var combinedArray = numberArrays.map(words => words.map(letter => letter.join('')));
     combinedArray = combinedArray.map(words => words.map(letter => TrinaryToLetter(letter)));
+    console.log()
     
     combinedArray.forEach(function (word, index){
 
       word.forEach(function(letter, index){
 
         translatedText = translatedText.concat(letter)
-
+    
       })
 
         translatedText = translatedText.concat(" ");
