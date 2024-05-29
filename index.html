@@ -6,8 +6,10 @@
     <title>darfish translator</title>
 </head>
 <body>
+    <script src="translator.js"></script> 
     <header>
     <h1>official darfish translator by <a href="https://github.com/luajinx">jinx</a></h1>
+    <p>v0.1 no current support for numbers and i will probably fix some bugs (or not (i dont know javascript it's a pain))</p>
     </header>
 
     <div id="inputcontainer">
@@ -19,12 +21,13 @@
         <textarea name="textarea" id="textinput"
          input="textarea" 
           rows="7" placeholder="Write what you want to translate here"></textarea>
-          <button>Translate</button>
+          <button onclick="onButtonPress()">Translate</button>
     </div>
 
     <div id="outputcontainer">
         <div id="outputdiv">outputdiv</div>
     </div>
+
 
 </body>
 </html>
