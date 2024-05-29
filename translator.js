@@ -215,7 +215,7 @@ if (/\d/.test(inputText)){
 
   var letterArrays = wordArrays.map(word => word.split('😺'));
   var letterArrays = wordArrays.map(word => word.split('🐱'));
-  
+
   letterArrays = letterArrays.filter(FilterWhiteSpaceStrings)
 
   var symbolArrays = letterArrays.map(word => word.map(letter => letter.split(' ')));
@@ -253,5 +253,10 @@ outputText(textToDarfish(GetInput()))
 else {
 outputText(darfishToText(GetInput()))
 }
+
+}
+
+document.getElementById("outputdiv").onmousedown = function() {
+  navigator.clipboard.writeText(document.getElementById("outputdiv").innerHTML)
 
 }
