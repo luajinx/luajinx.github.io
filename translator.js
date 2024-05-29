@@ -105,7 +105,7 @@ function numbersToTrinary(string) {
 
 
 function FilterWhiteSpaceStrings(elm){
-  if(elm !== "" && elm !== " ") {
+  if(elm !== "" && elm !== " " && elm !== undefined) {
     return elm
   }
 }
@@ -182,11 +182,12 @@ return translatedText
 
 function TrinaryToLetter(string)
 {
-  var decimalNumber = parseInt(Number(string),3);
-
-  if (IDtoLetterMap[decimalNumber])
+  console.log(string)
+  var decimalNumber = parseInt(Number(string), 3);
+  console.log(string)
+  if (IDtoLetterMap[decimalNumber] && string.length > 0 )
     {
-    
+      console.log(string.length)
       return IDtoLetterMap[decimalNumber]
     } else {
       return string;
@@ -214,17 +215,18 @@ function darfishToText(inputText)
     console.log(inputText,processedText);
 
     var wordArrays = processedText.split('😺😺');
-    
+    wordArrays = wordArrays.filter(FilterWhiteSpaceStrings)
     var letterArrays = wordArrays.map(word => word.split('😺'));
+    letterArrays = letterArrays.filter(FilterWhiteSpaceStrings)
+
     var symbolArrays = letterArrays.map(word => word.map(letter => letter.split(' ')));
-    console.log(symbolArrays)
+    symbolArrays = symbolArrays.filter(FilterWhiteSpaceStrings)
+
     var numberArrays = symbolArrays.map(words => words.map(letter => letter.map(symbols => DargumentsToNumbers(symbols))));
-    console.log(numberArrays)
+
 
     var combinedArray = numberArrays.map(words => words.map(letter => letter.join('')));
-    console.log(combinedArray)
     combinedArray = combinedArray.map(words => words.map(letter => TrinaryToLetter(letter)));
-    console.log(combinedArray)
     
     combinedArray.forEach(function (word, index){
 
