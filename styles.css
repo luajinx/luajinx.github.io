@@ -76,7 +76,7 @@ header{
     flex: 1;
     overflow-y: auto;
     padding: 0.2rem;
-    height: 10rem;
+    min-height: 10rem;
     overflow-y: auto;
     color: var(--text-color);
 }
