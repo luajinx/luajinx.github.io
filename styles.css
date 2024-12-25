@@ -84,6 +84,7 @@ header{
 textarea{
     resize: none;
    user-select:none;
+    font-family: "Comic Neue", cursive;
 }
 
 textarea:focus, input:focus{
