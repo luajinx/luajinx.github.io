@@ -47,7 +47,6 @@ header{
 .wrapper{
     max-width: 1080px;
     margin: auto;
-    height: 100%;
 }
 
 .textarea-layout{
