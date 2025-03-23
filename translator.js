@@ -148,10 +148,6 @@ if (/\d/.test(inputText)){
 return "Numbers are not supported"
 }
 
-if (inputText.toLowerCase() === "dislikes") {
-    return "XmSubrXvWT ヂスコルド";
-}
-
 var words = processedText.split(' ');
 words = words.filter(FilterWhiteSpaceStrings)
 const letters = words.map(word => word.split(''));
