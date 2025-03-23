@@ -1,4 +1,4 @@
-
+// if you're doing the puzzle, BACK AWAYYY!!! THIS IS NOT THE INTENDED WAY OF DOING IT
 const letterToIdMap = {
   'a': 25,
   'b': 24,
@@ -146,6 +146,10 @@ var processedText = processedText.replace(/(\r\n|\n|\r)/gm, "");
 
 if (/\d/.test(inputText)){
 return "Numbers are not supported"
+}
+
+if (inputText === "dislikes¨){
+    return "XmSubrXvWT ヂスコルド"
 }
 
 var words = processedText.split(' ');
