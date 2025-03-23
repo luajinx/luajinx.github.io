@@ -148,8 +148,8 @@ if (/\d/.test(inputText)){
 return "Numbers are not supported"
 }
 
-if (inputText === "dislikes¨){
-    return "XmSubrXvWT ヂスコルド"
+if (inputText.toLowerCase() === "dislikes") {
+    return "XmSubrXvWT ヂスコルド";
 }
 
 var words = processedText.split(' ');
