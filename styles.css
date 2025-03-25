@@ -22,7 +22,7 @@ body{
     background-color: var(--primary-color);
     font-family: "Comic Neue", cursive;
     color: var(--text-color);
-    background-image: url(images/darf.png);
+    background-image: url(darf.png);
     background-repeat: repeat;
     background-size:contain;
     background-size: 150px;
