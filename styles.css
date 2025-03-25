@@ -1,10 +1,12 @@
 :root{
-    --primary-color: rgb(79, 111, 82);
-    --secondary-color: rgb(26, 77, 46);
-    --ternary-color: rgb(15, 44, 27);
+    --primary-color: rgb(182, 55, 78);
+    --secondary-color: rgb(168, 32, 57);
+    --ternary-color: rgb(130, 40, 39);
     --text-color: rgb(232, 223, 202);
 }
 
+html{height: 100%;
+}
 
 
 *{
@@ -20,6 +22,10 @@ body{
     background-color: var(--primary-color);
     font-family: "Comic Neue", cursive;
     color: var(--text-color);
+    background-image: url(images/darf.png);
+    background-repeat: repeat;
+    background-size:contain;
+    background-size: 150px;
 
 }
 
@@ -29,7 +35,6 @@ a{
 
 header{
     text-align: center;
-    margin: 2rem;
 }
 
 
@@ -40,18 +45,22 @@ header{
 
 .wrapper-narrow{
     max-width: 500px;
-    margin: auto;
+    padding: 2rem;
+    margin-inline: auto;
 }
 
 
 .wrapper{
-    max-width: 1080px;
-    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+    background-color: var(--primary-color);
+    height: 100%;
+    max-width: 920px;
+    margin-inline: auto;
 }
 
 .textarea-layout{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
     gap: 1rem;
 }
 
@@ -73,10 +82,9 @@ header{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     background-color: var(--secondary-color);
     border-radius: 2px;
-    flex: 1;
     overflow-y: auto;
     padding: 0.2rem;
-    min-height: 10rem;
+    height: 10rem;
     overflow-y: auto;
     color: var(--text-color);
 }
