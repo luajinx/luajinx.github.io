@@ -5,7 +5,8 @@
     --text-color: rgb(232, 223, 202);
 }
 
-html{height: 100%;
+html{
+    height: 100vh;
 }
 
 
